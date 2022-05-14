@@ -19,14 +19,10 @@ struct EscapeView: View {
     
     var body: some View {
         
-        
+        ZStack(alignment: .topTrailing){
         VStack(alignment: .center, spacing: 90) {
-            
+
             profilelogBall()
-            
-//            Text("My Options")
-//            .foregroundColor(.green)
-//            .font(.system(size: 20, weight: .black, design: .rounded))
             
             VStack(alignment: .leading, spacing: 35) {
                 ForEach(alertas, id: \.self) { alerta in
@@ -42,9 +38,10 @@ struct EscapeView: View {
             Spacer()
 
         }
-//                .background(Color.green.opacity(0.5))
-
+            LogoutButton()
+                .offset(x: -45, y: 62)
     }
+}
     
     func exitButton() -> some View {
         //    Button() {

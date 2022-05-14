@@ -20,29 +20,21 @@ struct ReportView: View {
     ]
     
     var body: some View {
-        
-        
-        VStack(alignment: .center, spacing: 70) {
-            
-            profilelogBall()
-            
-//            Text("My Options")
-//            .foregroundColor(.green)
-//            .font(.system(size: 20, weight: .black, design: .rounded))
-            
-            VStack(alignment: .leading, spacing: 17) {
-                ForEach(alertas, id: \.self) { alerta in
-                    alertView(text: alerta)
+        ZStack(alignment: .topTrailing) {
+            VStack(alignment: .center, spacing: 70) {
+                profilelogBall()
+                VStack(alignment: .leading, spacing: 17){
+                    ForEach(alertas, id: \.self) { alerta in
+                        alertView(text: alerta)
+                    }
+                    .padding([.leading, .trailing], 40)
                 }
+                .padding()
+                .edgesIgnoringSafeArea(.top)
+                Spacer()
             }
-            .padding()
-            .frame(width: 350)
-            Spacer()
-            
-            
-//            exitButton()
-            Spacer()
-
+            LogoutButton()
+                .offset(x: -45, y: 50)
         }
 //                .background(Color.green.opacity(0.5))
 

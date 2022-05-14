@@ -28,10 +28,10 @@ struct TabsView: View {
                     Label("", systemImage: "message.fill")
                 }
             
-            HomeView()
-                .tabItem {
-                    Label("", systemImage: "person")
-                }
+//            HomeView()
+//                .tabItem {
+//                    Label("", systemImage: "person")
+//                }
             
             
 //

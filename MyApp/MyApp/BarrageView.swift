@@ -28,38 +28,39 @@ struct BarrageView: View {
     
     var body: some View {
         
-        
-        VStack(alignment: .center, spacing: 55) {
-            VStack(spacing: 95){
-            profilelogBall()
-            
-//            VStack(spacing: 200){
-            VStack(alignment: .leading, spacing: 20) {
-                ForEach(barragens) { barragem in
-                    alertView(para: barragem)
-                    
-                    
+        ZStack(alignment: .topTrailing) {
+            VStack(alignment: .center, spacing: 55) {
+                VStack(spacing: 95){
+                profilelogBall()
+                
+    //            VStack(spacing: 200){
+                VStack(alignment: .leading, spacing: 20) {
+                    ForEach(barragens) { barragem in
+                        alertView(para: barragem)
+                        
+                        
+                    }
+                }
+                .padding()
+                .frame(width: 350)
+                Spacer()
+                
+                
+                //            exitButton()
+                            Spacer()
                 }
             }
-            .padding()
-            .frame(width: 350)
-            Spacer()
-            
-            
-            //            exitButton()
-                        Spacer()
-            }
-        }
-        .sheet(item: $barragemSelecionada) { barragem in
-            DetalheBarragem(barragem: barragem)
-            
-//            Spacer()
+            .sheet(item: $barragemSelecionada) { barragem in
+                DetalheBarragem(barragem: barragem)
+                
+    //            Spacer()
 
+            }
+            LogoutButton()
+                .offset(x: -45, y: 57)
         }
 
     }
-
-
 //                .background(Color.green.opacity(0.5))
 
 

@@ -20,6 +20,7 @@
 		5724234D28060103004EB65A /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724234C28060103004EB65A /* ReportView.swift */; };
 		5724235128060B26004EB65A /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724235028060B26004EB65A /* DataView.swift */; };
 		5724235328060BB2004EB65A /* FunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724235228060BB2004EB65A /* FunView.swift */; };
+		57C85263282FCD8D00FC11EC /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C85262282FCD8D00FC11EC /* LogoutButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		5724234C28060103004EB65A /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		5724235028060B26004EB65A /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
 		5724235228060BB2004EB65A /* FunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunView.swift; sourceTree = "<group>"; };
+		57C85262282FCD8D00FC11EC /* LogoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				571CAE44280F34EF00426099 /* DetalheBarragem.swift */,
 				5724234A2805FD16004EB65A /* EscapeView.swift */,
 				5714E7482801B6AA00D4E6CE /* CircleImageView.swift */,
+				57C85262282FCD8D00FC11EC /* LogoutButton.swift */,
 				5714E73C2801A7FA00D4E6CE /* Assets.xcassets */,
 				5714E73E2801A7FA00D4E6CE /* Preview Content */,
 			);
@@ -171,6 +174,7 @@
 				571CAE45280F34EF00426099 /* DetalheBarragem.swift in Sources */,
 				5724235328060BB2004EB65A /* FunView.swift in Sources */,
 				571CAE49280F49D000426099 /* TabsView.swift in Sources */,
+				57C85263282FCD8D00FC11EC /* LogoutButton.swift in Sources */,
 				5714E73B2801A7F900D4E6CE /* ContentView.swift in Sources */,
 				572423492805F8A3004EB65A /* BarrageView.swift in Sources */,
 				5714E7392801A7F900D4E6CE /* MyAppApp.swift in Sources */,
