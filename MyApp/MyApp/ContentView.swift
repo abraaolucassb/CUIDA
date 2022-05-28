@@ -17,24 +17,18 @@ struct ContentView: View {
     
     
     var body: some View {
-        ZStack {
+        ZStack{
             Image("barragem_foto")
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
-            VStack(alignment: .center, spacing: 130) {
+            VStack(alignment: .center, spacing: 1) {
                 profileBall()
-//                funKeyprof()
                 
-                Text("SEJA BEM-VINDO(A) AO NOSSO APLICATIVO! AQUI VOCÊ PODERÁ SABER TUDO SOBRE A SITUAÇÃO DAS BARRAGENS EM MINAS GERAIS, ROTAS DE FUGA E MUITO MAIS!")
-                    .padding(32)
-                    .foregroundColor(.white)
-                    .background(Color("ColorMeioEscuro"))
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .foregroundColor(.white)
-                    .font(.system(size: 18, weight: .bold, design: .monospaced))
-                    .frame(width: 350)
-
+                Image("cuida_logo")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 350, height: 350)
                 
                 VStack {
                     
@@ -60,83 +54,25 @@ struct ContentView: View {
         
     }
     
-//    func funKeyprof() -> some View {
-//        VStack (spacing: 20){
-//            HStack(alignment: .top, spacing: 15){
-//                circleImage(systemName: "person.fill")
-//
-//
-//                VStack(alignment: .leading, spacing: 10){
-//                    //            Text("Usuário")
-//                    //            HStack {
-//                    TextField("Insira aqui seu usuário", text: $usuario)
-////                        .padding()
-////                        .background(.gray)
-////                        .cornerRadius(7)
-//
-//                    Divider()
-//                        .frame(height: 0.5)
-//                        .background(.black)
-//                }
-//                .padding(.trailing)
-//
-//            }
-//            HStack(alignment: .top, spacing: 15){
-////                CircleImageView(systemName: "key.fill")
-//                circleImage(systemName: "key.fill")
-//
-//
-//                VStack(alignment: .leading, spacing: 10){
-//                    //            Text("Usuário")
-//                    //            HStack {
-//                    TextField("Insira aqui sua senha", text: $senha)
-//
-//                    Divider()
-//                        .frame(height: 0.5)
-//                        .background(.black)
-//                }
-//                .padding(.trailing)
-//
-//            }
-//
-//        }
-//
-//    }
-    
-    
     func circleImage(systemName: String) -> some View {
         Image(systemName: systemName)
             .resizable()
             .scaledToFit()
-            .frame(width: 40, height: 40)
+            .frame(width: 40, height: 50)
             .padding(.leading)
             .foregroundColor(.gray)
     }
 }
 
-func loginButton() -> some View {
-//    Button {
-        VStack(alignment: .leading, spacing: 10){
-        Text("Entrar")
-            
-            .padding()
-
-            .foregroundColor(.white)
-            .background(.brown)
-            .clipShape(RoundedRectangle(cornerRadius: 5))
-    
-  }
-// }
-}
 
 func profileBall() -> some View {
-    Image(systemName: "cloud.drizzle.fill")
+    Image("logo_barragem")
         .resizable()
         .scaledToFit()
-        .frame(width: 100, height: 100)
+        .frame(width: 250, height: 250)
         .padding(20)
         .foregroundColor(.white)
-        .background(Color.brown.opacity(1))
+        .background(Color("ColorClara"))
         .clipShape(Circle())
     
 }

@@ -20,28 +20,29 @@ struct ReportView: View {
     ]
     
     var body: some View {
-        ZStack(alignment: .topTrailing) {
-            VStack(alignment: .center, spacing: 70) {
+            VStack(alignment: .center, spacing: 0) {
                 profilelogBall()
+                    .offset(x: 0, y: -54)
+                
                 VStack(alignment: .leading, spacing: 17){
                     ForEach(alertas, id: \.self) { alerta in
                         alertView(text: alerta)
                     }
-                    .padding([.leading, .trailing], 40)
+                    .padding([.leading, .trailing], 10)
                 }
                 .padding()
                 .edgesIgnoringSafeArea(.top)
+                
                 Spacer()
             }
-            LogoutButton()
-                .offset(x: -45, y: 50)
-        }
+//            LogoutButton()
+//                .offset(x: -45, y: 50)
+
 //                .background(Color.green.opacity(0.5))
 
     }
     
     func exitButton() -> some View {
-        //    Button() {
         VStack(alignment: .leading, spacing: 20){
             Image(systemName: "rectangle.portrait.and.arrow.right")
                 .padding()
@@ -52,7 +53,6 @@ struct ReportView: View {
             
             Spacer()
         }
-        //    }
     }
     
     func profilelogBall() -> some View {
@@ -60,13 +60,12 @@ struct ReportView: View {
         Image(systemName: "phone.fill")
             .resizable()
             .scaledToFit()
-            .frame(width: 100, height: 100)
+            .frame(width: 120, height: 120)
             .padding(.horizontal)
             .frame(width: 220, height: 150)
             .foregroundColor(.white)
-//            .background(Color.white)
             .clipShape(Rectangle())
-            .cornerRadius(100)
+//            .cornerRadius(10)
             
         
             Text("CONTATE AS AUTORIDADES")
@@ -75,11 +74,8 @@ struct ReportView: View {
                 
 
      }
-//        .padding(.horizontal)
-//        .font(.system(size: 1)
-//        .resizable()
         .scaledToFill()
-        .frame(width: 460, height: 290)
+        .frame(width: 460, height: 265)
         .padding(.top)
         .background(Color.brown)
         .cornerRadius(100)

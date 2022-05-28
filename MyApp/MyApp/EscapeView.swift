@@ -19,44 +19,30 @@ struct EscapeView: View {
     
     var body: some View {
         
-        ZStack(alignment: .topTrailing){
-        VStack(alignment: .center, spacing: 90) {
+//        ZStack(alignment: .topTrailing){
+        VStack(alignment: .center, spacing: 96) {
 
             profilelogBall()
+             .offset(x: 0, y: -18)
+
             
-            VStack(alignment: .leading, spacing: 35) {
+            VStack(alignment: .leading, spacing: 17) {
                 ForEach(alertas, id: \.self) { alerta in
                     alertView(text: alerta)
                 }
+                .padding([.leading, .trailing], 10)
             }
             .padding()
-            .frame(width: 350)
+            .edgesIgnoringSafeArea(.top)
+            
             Spacer()
-            
-            
-//            exitButton()
             Spacer()
 
         }
-            LogoutButton()
-                .offset(x: -45, y: 62)
-    }
+//            LogoutButton()
+//                .offset(x: -45, y: 62)
+//    }
 }
-    
-    func exitButton() -> some View {
-        //    Button() {
-        VStack(alignment: .leading, spacing: 20){
-            Image(systemName: "rectangle.portrait.and.arrow.right")
-                .padding()
-            
-                .foregroundColor(.white)
-                .background(Color.green)
-                .clipShape(Circle())
-            
-            Spacer()
-        }
-        //    }
-    }
     
     func profilelogBall() -> some View {
         VStack(spacing: 10){
@@ -67,7 +53,6 @@ struct EscapeView: View {
             .padding(.horizontal)
             .frame(width: 220, height: 150)
             .foregroundColor(.white)
-//            .background(Color.white)
             .clipShape(Rectangle())
             .cornerRadius(100)
             
@@ -78,9 +63,6 @@ struct EscapeView: View {
                 
 
      }
-//        .padding(.horizontal)
-//        .font(.system(size: 1)
-//        .resizable()
         .scaledToFill()
         .frame(width: 460, height: 290)
         .padding(.top)

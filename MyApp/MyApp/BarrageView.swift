@@ -28,57 +28,33 @@ struct BarrageView: View {
     
     var body: some View {
         
-        ZStack(alignment: .topTrailing) {
-            VStack(alignment: .center, spacing: 55) {
-                VStack(spacing: 95){
+//    VStack(alignment: .center, spacing: 45) {
+        VStack(spacing: 96){
                 profilelogBall()
+                        .offset(x: 0, y: -18)
                 
-    //            VStack(spacing: 200){
-                VStack(alignment: .leading, spacing: 20) {
+                VStack(alignment: .leading, spacing: 17) {
                     ForEach(barragens) { barragem in
                         alertView(para: barragem)
                         
                         
                     }
+                    .padding([.leading, .trailing], 10)
                 }
                 .padding()
-                .frame(width: 350)
+                .edgesIgnoringSafeArea(.top)
+                
                 Spacer()
-                
-                
-                //            exitButton()
-                            Spacer()
+                Spacer()
                 }
-            }
-            .sheet(item: $barragemSelecionada) { barragem in
-                DetalheBarragem(barragem: barragem)
-                
-    //            Spacer()
-
-            }
-            LogoutButton()
-                .offset(x: -45, y: 57)
-        }
-
-    }
-//                .background(Color.green.opacity(0.5))
-
-
-    
-    func exitButton() -> some View {
-        //    Button() {
-        VStack(alignment: .leading, spacing: 20){
-            Image(systemName: "rectangle.portrait.and.arrow.right")
-                .padding()
+        .sheet(item: $barragemSelecionada) { barragem in
+            DetalheBarragem(barragem: barragem)
             
-                .foregroundColor(.white)
-                .background(Color.green)
-                .clipShape(Circle())
-            
-            Spacer()
+
         }
-        //    }
-    }
+//        LogoutButton()
+        //        .offset(x: -45, y: 57)
+          }
     
     func profilelogBall() -> some View {
         VStack(spacing: 10){
@@ -89,7 +65,6 @@ struct BarrageView: View {
             .padding(.horizontal)
             .frame(width: 220, height: 150)
             .foregroundColor(.white)
-//            .background(Color.white)
             .clipShape(Rectangle())
             .cornerRadius(100)
             
@@ -100,9 +75,6 @@ struct BarrageView: View {
                 
 
      }
-//        .padding(.horizontal)
-//        .font(.system(size: 1)
-//        .resizable()
         .scaledToFill()
         .frame(width: 460, height: 290)
         .padding(.top)

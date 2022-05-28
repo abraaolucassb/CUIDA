@@ -9,10 +9,7 @@ struct FunView: View {
     @State private var funFact = ""
     var body: some View {
         VStack(alignment: .center, spacing: 5) {
-            HStack {
-                Spacer()
-                LogoutButton()
-            }
+
             Image(systemName: "message.fill")
                 .resizable()
                 .scaledToFit()
@@ -23,6 +20,8 @@ struct FunView: View {
             //            .background(Color.white)
                 .clipShape(Rectangle())
                 .cornerRadius(100)
+            
+            VStack(spacing: 67){
             
             Text("INFORMAÇÕES")
                 .foregroundColor(.brown)
@@ -44,11 +43,12 @@ struct FunView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 5))
                     .font(.system(size: 13, weight: .bold, design: .rounded))
             }
+            .offset(x: 0, y: -77)
         }
         .padding()
         
+      }
     }
-    
 }
 
 struct FunView_Previews: PreviewProvider {
