@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+struct Link<Label> where Label : View {}
+
 struct ReportView: View {
     
     let alertas: [String] = [
@@ -15,7 +17,6 @@ struct ReportView: View {
         "SAMU (192)",
         "PRE (198)",
         "PRF (191)",
-        
         
     ]
     
@@ -39,7 +40,7 @@ struct ReportView: View {
 //                .offset(x: -45, y: 50)
 
 //                .background(Color.green.opacity(0.5))
-
+        
     }
     
     func exitButton() -> some View {
